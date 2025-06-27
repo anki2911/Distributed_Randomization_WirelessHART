@@ -1,0 +1,11 @@
+import sys
+import os
+
+for i in range(100):
+    os.system("python Brute_Force_Entropy.py ../Util_33.3/Flow_4_1.txt  ../Util_33.3/SlotSwapper/Sched_1_" + str(i+1) + ".txt  ../Util_33.3/BruteForce_Entropy/Prob_1_" + str(i+1) + ".txt ../Util_33.3/BruteForce_Entropy/entropy_1_" + str(i+1) + ".txt")
+    os.system("python Brute_Force_Entropy.py ../Util_50/Flow_4_1.txt  ../Util_50/SlotSwapper/Sched_1_" + str(i+1) + ".txt ../Util_50/BruteForce_Entropy/Prob_1_" + str(i+1) + ".txt ../Util_50/BruteForce_Entropy/entropy_1_" + str(i+1) + ".txt")
+    os.system("python Brute_Force_Entropy.py ../Util_66.6/Flow_4_1.txt  ../Util_66.6/SlotSwapper/Sched_1_" + str(i+1) + ".txt ../Util_66.6/BruteForce_Entropy/Prob_1_" + str(i+1) + ".txt ../Util_66.6/BruteForce_Entropy/entropy_1_" + str(i+1) + ".txt")
+    os.system("python Brute_Force_Entropy.py ../Util_75/Flow_4_1.txt  ../Util_75/SlotSwapper/Sched_1_" + str(i+1) + ".txt ../Util_75/BruteForce_Entropy/Prob_1_" + str(i+1) + ".txt ../Util_75/BruteForce_Entropy/entropy_1_" + str(i+1) + ".txt")
+    
+    print i
+    

@@ -1,0 +1,98 @@
+CC     = "C:\Program Files\MATLAB\R2013b\sys\lcc64\lcc64\bin\lcc64.exe"
+LD     = "C:\Program Files\MATLAB\R2013b\sys\lcc64\lcc64\bin\lcclnk64.exe"
+LIBCMD = "C:\Program Files\MATLAB\R2013b\sys\lcc64\lcc64\bin\lcclib64.exe"
+CFLAGS = -dll -noregistrylookup  -c -Zp8 -DLCC_WIN64 -DMATLAB_MEX_FILE -DMX_COMPAT_32 -nodeclspec 
+LDFLAGS = -s -dll -L"C:\Program Files\MATLAB\R2013b\sys\lcc64\lcc64\lib64" -entry LibMain -map sfun.map 
+LIBFLAGS = 
+
+OBJECTS = \
+	"Control_Loop4_2Model_sfun.obj"\
+	"c1_Control_Loop4_2Model.obj"\
+	"c2_Control_Loop4_2Model.obj"\
+	"c3_Control_Loop4_2Model.obj"\
+	"c4_Control_Loop4_2Model.obj"\
+	"c5_Control_Loop4_2Model.obj"\
+	"c6_Control_Loop4_2Model.obj"\
+	"c7_Control_Loop4_2Model.obj"\
+	"c8_Control_Loop4_2Model.obj"\
+	"c9_Control_Loop4_2Model.obj"\
+	"c10_Control_Loop4_2Model.obj"\
+	"c11_Control_Loop4_2Model.obj"\
+	"c12_Control_Loop4_2Model.obj"\
+	"c13_Control_Loop4_2Model.obj"\
+	"c14_Control_Loop4_2Model.obj"\
+	"c15_Control_Loop4_2Model.obj"\
+	"c16_Control_Loop4_2Model.obj"\
+	"c17_Control_Loop4_2Model.obj"\
+	"c18_Control_Loop4_2Model.obj"\
+	"c19_Control_Loop4_2Model.obj"\
+	"c20_Control_Loop4_2Model.obj"\
+	"c21_Control_Loop4_2Model.obj"\
+	"Control_Loop4_2Model_sfun_registry.obj"\
+	"lccstub.obj"\
+	"Control_Loop4_2Model_sfun.def"\
+	"C:\Program Files\MATLAB\R2013b\stateflow\c\mex\lib\win64\sfc_mexlcc64.lib"\
+	"C:\Program Files\MATLAB\R2013b\stateflow\c\debugger\lib\win64\sfc_debuglcc64.lib"\
+	"C:\Program Files\MATLAB\R2013b\extern\lib\win64\microsoft\libmwblas.lib"\
+	"C:\Program Files\MATLAB\R2013b\extern\lib\win64\microsoft\libmx.lib"\
+	"C:\Program Files\MATLAB\R2013b\extern\lib\win64\microsoft\libmex.lib"\
+	"C:\Program Files\MATLAB\R2013b\extern\lib\win64\microsoft\libmat.lib"\
+	"C:\Program Files\MATLAB\R2013b\extern\lib\win64\microsoft\libfixedpoint.lib"\
+	"C:\Program Files\MATLAB\R2013b\extern\lib\win64\microsoft\libut.lib"\
+	"C:\Program Files\MATLAB\R2013b\extern\lib\win64\microsoft\libmwmathutil.lib"\
+	"C:\Program Files\MATLAB\R2013b\extern\lib\win64\microsoft\libemlrt.lib"\
+	"C:\Program Files\MATLAB\R2013b\lib\win64\libippmwipt.lib"\
+
+INCLUDE_PATH= -I"C:\Program Files\MATLAB\R2013b\sys\lcc64\lcc64\include64"  -I"C:\Program Files\MATLAB\R2013b\extern\include"  -I"C:\Program Files\MATLAB\R2013b\simulink\include"  -I"C:\Program Files\MATLAB\R2013b\rtw\c\src"  -I"C:\Program Files\MATLAB\R2013b\stateflow\c\mex\include"  -I"C:\Program Files\MATLAB\R2013b\stateflow\c\debugger\include"  -I"C:\Program Files\MATLAB\R2013b\toolbox\stateflow\src\sf_runtime\export\include\sf_runtime" 
+ 
+
+Control_Loop4_2Model_sfun.mexw64 : $(MAKEFILE) $(OBJECTS)
+	$(LD) $(LDFLAGS) -o Control_Loop4_2Model_sfun.mexw64 @Control_Loop4_2Model_sfun.lmko
+Control_Loop4_2Model_sfun.obj :	"Control_Loop4_2Model_sfun.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "Control_Loop4_2Model_sfun.c"
+c1_Control_Loop4_2Model.obj :	"c1_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c1_Control_Loop4_2Model.c"
+c2_Control_Loop4_2Model.obj :	"c2_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c2_Control_Loop4_2Model.c"
+c3_Control_Loop4_2Model.obj :	"c3_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c3_Control_Loop4_2Model.c"
+c4_Control_Loop4_2Model.obj :	"c4_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c4_Control_Loop4_2Model.c"
+c5_Control_Loop4_2Model.obj :	"c5_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c5_Control_Loop4_2Model.c"
+c6_Control_Loop4_2Model.obj :	"c6_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c6_Control_Loop4_2Model.c"
+c7_Control_Loop4_2Model.obj :	"c7_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c7_Control_Loop4_2Model.c"
+c8_Control_Loop4_2Model.obj :	"c8_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c8_Control_Loop4_2Model.c"
+c9_Control_Loop4_2Model.obj :	"c9_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c9_Control_Loop4_2Model.c"
+c10_Control_Loop4_2Model.obj :	"c10_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c10_Control_Loop4_2Model.c"
+c11_Control_Loop4_2Model.obj :	"c11_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c11_Control_Loop4_2Model.c"
+c12_Control_Loop4_2Model.obj :	"c12_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c12_Control_Loop4_2Model.c"
+c13_Control_Loop4_2Model.obj :	"c13_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c13_Control_Loop4_2Model.c"
+c14_Control_Loop4_2Model.obj :	"c14_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c14_Control_Loop4_2Model.c"
+c15_Control_Loop4_2Model.obj :	"c15_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c15_Control_Loop4_2Model.c"
+c16_Control_Loop4_2Model.obj :	"c16_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c16_Control_Loop4_2Model.c"
+c17_Control_Loop4_2Model.obj :	"c17_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c17_Control_Loop4_2Model.c"
+c18_Control_Loop4_2Model.obj :	"c18_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c18_Control_Loop4_2Model.c"
+c19_Control_Loop4_2Model.obj :	"c19_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c19_Control_Loop4_2Model.c"
+c20_Control_Loop4_2Model.obj :	"c20_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c20_Control_Loop4_2Model.c"
+c21_Control_Loop4_2Model.obj :	"c21_Control_Loop4_2Model.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c21_Control_Loop4_2Model.c"
+Control_Loop4_2Model_sfun_registry.obj :	"Control_Loop4_2Model_sfun_registry.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "Control_Loop4_2Model_sfun_registry.c"
+lccstub.obj :	"C:\Program Files\MATLAB\R2013b\sys\lcc64\lcc64\mex\lccstub.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "C:\Program Files\MATLAB\R2013b\sys\lcc64\lcc64\mex\lccstub.c"

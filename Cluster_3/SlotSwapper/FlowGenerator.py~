@@ -1,0 +1,96 @@
+import sys
+import library_functions
+import library_multi_channel
+import random
+from igraph import *
+from tqdm import tqdm
+import math
+
+
+f2 = open("Util_66.6/Flow_4_1.txt","r")
+FLOW = []
+
+i = 0
+for l in f2:
+    l = l.strip()
+    for words in l:
+        words = l.split()
+    if words[0][0] == "F":
+        FLOW.append(library_functions.Flow(0,[],0))
+        
+i = -1
+f3 = open("Util_66.6/Flow_4_1.txt","r")
+for lines in f3:
+    lines = lines.strip()
+    #print counter
+    if lines[0][0] == "F":
+        fid = lines
+        counter = 0
+        i += 1
+    elif counter == 1:
+        deadline = int(lines)
+        FLOW[i].deadline = deadline
+    else:
+        lines = lines.split(" ")
+        FLOW[i].flow.append((int(lines[0]),int(lines[1])))
+    counter += 1   
+
+hyperperiod = 60
+num_of_flows = 4
+count = 100
+
+
+for c in range(100):
+    allocated = []
+    free = []
+    assigned = []
+    for i in range(hyperperiod):
+        free.append(i)
+        assigned.append(0)
+    for j in range(num_of_flows):
+        n_inst = hyperperiod/FLOW[j].deadline
+        for i in range(n_inst):
+            lb = i*FLOW[j].deadline
+            ub = (i+1)*FLOW[j].deadline - 1
+            for k in range(len(FLOW[j].flow)):
+                flag = 0
+                while(flag == 0):
+                    s = random.randint(lb,ub)
+                    if s in free:
+                        free.remove(s)
+                        allocated.append(s)
+                        assigned[s] = j+1
+                        flag = 1
+
+    index = []
+    for j in range(num_of_flows):
+        index.append(0)
+    print assigned   
+    f3 = open("Util_66.6/Sched_1_" + str(c+1) + ".txt","w+")
+    for i in range(hyperperiod):
+        if assigned[i] == 0:
+            f3.write("- - -\n")
+        else:
+            f = assigned[i]
+            #print FLOW[f-1].flow[(index[f-1])][0]
+            #print FLOW[f-1].flow[(index[f-1])][1]
+            f3.write(str(FLOW[f-1].flow[(index[f-1])][0]) + " " + str(FLOW[f-1].flow[(index[f-1])][1]) + " " + str(f) + "\n")
+            index[f-1] = index[f-1] + 1
+        for j in range(num_of_flows):
+            if (i+1)%FLOW[j].deadline == 0:
+                index[j] = 0    
+    f3.close() 
+    del index[:]
+    del allocated[:]
+    del assigned[:]
+    del free[:]
+    
+                                                                                                 
+        
+        
+        
+            
+                    
+            
+                     
+        

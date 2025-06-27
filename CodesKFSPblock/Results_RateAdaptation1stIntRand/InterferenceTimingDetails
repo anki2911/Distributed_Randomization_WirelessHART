@@ -1,0 +1,16 @@
+signal = 5 units (constant)
+
+interference triggered between 65 to 85 s after first period adaptation occurs at 55 s from 10 to 20 
+
+period changes from 10 to 20 at 54s
+network side 55.047s
+period changes from 20 to 10 at 70s (control side)
+network side 71.132s
+
+period changes from 10 to 20 at 141s
+network side 142.182s
+period changes from 20 to 30 at 191s
+network side 191.761s
+
+
+

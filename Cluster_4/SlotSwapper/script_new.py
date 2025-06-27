@@ -1,0 +1,16 @@
+import sys
+import os
+
+for i in range(100):
+    #os.system("python SlotSwapper.py ../Util_73.3/Flow_4_1.txt  ../Util_73.3/SlotSwapper/Sched_1_" + str(i+1) + ".txt ../Util_73.3/SlotSwapper_Entropy/Prob_1_" + str(i+1) + ".txt ../Util_73.3/SlotSwapper_Entropy/entropy_1_" + str(i+1) + ".txt")
+    os.system("python SlotSwapper.py ../Util_80/Flow_4_1.txt  ../Util_80/SlotSwapper/Sched_1_" + str(i+1) + ".txt ../Util_80/SlotSwapper_Entropy/Prob_1_" + str(i+1) + ".txt ../Util_80/SlotSwapper_Entropy/entropy_1_" + str(i+1) + ".txt")
+    os.system("python SlotSwapper.py ../Util_83.3/Flow_4_1.txt  ../Util_83.3/SlotSwapper/Sched_1_" + str(i+1) + ".txt ../Util_83.3/SlotSwapper_Entropy/Prob_1_" + str(i+1) + ".txt ../Util_83.3/SlotSwapper_Entropy/entropy_1_" + str(i+1) + ".txt")
+    os.system("python SlotSwapper.py ../Util_90/Flow_4_1.txt  ../Util_90/SlotSwapper/Sched_1_" + str(i+1) + ".txt ../Util_90/SlotSwapper_Entropy/Prob_1_" + str(i+1) + ".txt ../Util_90/SlotSwapper_Entropy/entropy_1_" + str(i+1) + ".txt")
+    os.system("python SlotSwapper.py ../Util_93.3/Flow_4_1.txt  ../Util_93.3/SlotSwapper/Sched_1_" + str(i+1) + ".txt ../Util_93.3/SlotSwapper_Entropy/Prob_1_" + str(i+1) + ".txt ../Util_93.3/SlotSwapper_Entropy/entropy_1_" + str(i+1) + ".txt")
+    
+    #os.system("python SlotSwapper.py ../Util_33.3/Flow_4_1.txt  ../Util_33.3/SlotSwapper/Sched_1_" + str(i+1) + ".txt ../Util_33.3/SlotSwapper_Entropy/Prob_1_" + str(i+1) + ".txt ../Util_33.3/SlotSwapper_Entropy/entropy_1_" + str(i+1) + ".txt")
+    #os.system("python SlotSwapper.py ../Util_50/Flow_4_1.txt  ../Util_50/SlotSwapper/Sched_1_" + str(i+1) + ".txt ../Util_50/SlotSwapper_Entropy/Prob_1_" + str(i+1) + ".txt ../Util_50/SlotSwapper_Entropy/entropy_1_" + str(i+1) + ".txt")
+    #os.system("python SlotSwapper.py ../Util_66.6/Flow_4_1.txt  ../Util_66.6/SlotSwapper/Sched_1_" + str(i+1) + ".txt ../Util_66.6/SlotSwapper_Entropy/Prob_1_" + str(i+1) + ".txt ../Util_66.6/SlotSwapper_Entropy/entropy_1_" + str(i+1) + ".txt")
+    #os.system("python SlotSwapper.py ../Util_75/Flow_4_1.txt  ../Util_75/SlotSwapper/Sched_1_" + str(i+1) + ".txt ../Util_75/SlotSwapper_Entropy/Prob_1_" + str(i+1) + ".txt ../Util_75/SlotSwapper_Entropy/entropy_1_" + str(i+1) + ".txt")
+    
+    print(i)

@@ -1,0 +1,12 @@
+Rate Adaptation Loop 1 Trigerred: 55s
+Effective in the wireless network from 55.941s
+
+2nd Adaptation Triggered at 105s
+Effective in the wireless network from 105.980s
+
+Noise of 10 units applied between 115s to 135s
+Rate reduces from 60 to 20 at 120s and from 20 to 10 at 120s
+Network side 120.983s
+
+Rate increases from 10 to 20 at 189s
+Network side at 189.975s
